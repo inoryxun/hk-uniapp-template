@@ -1,0 +1,29 @@
+{
+  "extends": "@antfu",
+  "globals": {
+    "uni": true
+  },
+  "rules": {
+    "no-console": "off",
+    "vue/comment-directive": "off",
+    "vue/html-closing-bracket-newline": "off"
+  },
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  },
+  "overrides": [
+    {
+      "files": "*.nvue",
+      // 使用 vue-eslint-parser 解析 .nvue 文件
+      "parser": "vue-eslint-parser",
+      "parserOptions": {
+        "ts": "@typescript-eslint/parser"
+      }
+    },
+    {
+      "files": "*.ts",
+      // 使用 vue-eslint-parser 解析 .nvue 文件
+      "parser": "@typescript-eslint/parser"
+    }
+  ]
+}
